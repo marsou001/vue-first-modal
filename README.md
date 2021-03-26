@@ -1,3 +1,7 @@
+This is my first ever VueJS app. It is just a demo to get a hands-on experience with this library, and so far I LOVE IT.
+
+The rest of the README.md file is the boilerplate from @vue/cli.
+
 # project-modal
 
 ## Project setup
