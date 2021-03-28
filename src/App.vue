@@ -1,11 +1,11 @@
 <template>
   <h1>{{ title }}</h1>
   <p>Welcome...</p>
-  <div v-if="showModal1">
+  <teleport to='#root' v-if="showModal1">
     <Modal :heading="heading1" :text="text1" theme="sale" @close="toggleModal1">
       kkkkkkkk      
     </Modal>
-  </div>  
+  </teleport>  
   <div v-if='showModal2'>
     <Modal :heading='heading2' :text='text2' theme='sale' @close='toggleModal2' />
   </div>
