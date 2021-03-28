@@ -1,13 +1,16 @@
 <template>
   <h1>{{ title }}</h1>
   <p>Welcome...</p>
-  <div v-if="showModal">
-    <Modal :heading="heading" :text="text" theme="sale" @close="toggleModal">
-      kkkkkkkk
-      
+  <div v-if="showModal1">
+    <Modal :heading="heading1" :text="text1" theme="sale" @close="toggleModal1">
+      kkkkkkkk      
     </Modal>
   </div>  
-  <button @click="toggleModal">open modal</button>
+  <div v-if='showModal2'>
+    <Modal :heading='heading2' :text='text2' theme='sale' @close='toggleModal2' />
+  </div>
+  <button @click="toggleModal1">open modal 1</button>
+  <button @click="toggleModal2">open modal 2</button>
 </template>
 
 <script>
@@ -18,14 +21,20 @@ export default {
   data() {
     return {
       title: 'My First Vue App!',
-      heading: 'Sign up for the Givaway!',
-      text: 'Grab your ninja swag for half price!',
-      showModal: false,
+      heading1: 'Sign up for the Givaway!',
+      text1: 'Grab your ninja swag for half price!',
+      heading2: 'Modal 2',
+      text2: 'Hello from modal 2',
+      showModal1: false,
+      showModal2: false,
     }
   },
   methods: {
-    toggleModal() {
-      this.showModal = !this.showModal
+    toggleModal1() {
+      this.showModal1 = !this.showModal1;
+    },
+    toggleModal2() {
+      this.showModal2 = !this.showModal2;
     }
   }
 }
